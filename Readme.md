@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Alina Malina](https://up.htmlacademy.ru/javascript/26/user/2071589).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Шишлянников](https://github.com/ronar).
 
 ---
 
