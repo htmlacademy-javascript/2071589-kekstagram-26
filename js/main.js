@@ -9,22 +9,23 @@ function getRandomInt(min, max) {
       result = Math.floor(Math.random() * (max - min + 1)) + min;
     }
     else {
-        result = 'max должен быть больше min'
+      result = 'max должен быть больше min';
     }
   }
   else {
-      result = 'введите min и max больше 0'
+    result = 'введите min и max больше 0';
   }
   return result;
 }
 
 function checkStrLength(str, maxLength) {
-  /* Функция для проверки максимальной длины строки */ 
-  str = String(str)
+  /* Функция для проверки максимальной длины строки */
+  str = String(str);
   if (str.length < maxLength) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
-
+getRandomInt(1, 10);
+checkStrLength('Hello World', 100);
