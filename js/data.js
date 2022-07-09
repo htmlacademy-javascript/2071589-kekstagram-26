@@ -30,7 +30,7 @@ const MESSAGES = [
 Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!`
 ];
 
-const PHOTO_DESCRIPTION_COUNT = 4;
+//const PHOTO_DESCRIPTION_COUNT = 5;
 
 function createPhotoDescription() {
   return {
@@ -48,6 +48,6 @@ function createPhotoDescription() {
 }
 
 // eslint-disable-next-line no-unused-vars
-const similarDescription = Array.from( { length: PHOTO_DESCRIPTION_COUNT }, createPhotoDescription);
+const similarDescription = (count) => Array.from( { length: count }, createPhotoDescription);
 
 export {similarDescription};
