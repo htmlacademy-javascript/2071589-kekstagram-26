@@ -14,7 +14,6 @@ usersPictures.forEach(({url, likes, comments}) => {
   pictureElement.querySelector('.picture__img').src = url;
   pictureElement.querySelector('.picture__likes').content = likes;
   pictureElement.querySelector('.picture__comments').content = comments;
-  console.log(pictureElement);
   picFragment.appendChild(pictureElement);
 });
 
