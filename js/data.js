@@ -30,24 +30,29 @@ const MESSAGES = [
 Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!`
 ];
 
-//const PHOTO_DESCRIPTION_COUNT = 5;
 
 function createPhotoDescription() {
+  // Генерирует дату для фоток юзеров
   return {
     id: getRandomPositiveInteger(1, 25),
     url: `photos/${getRandomPositiveInteger(1, 25)}.jpg`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomPositiveInteger(15, 200),
-    comments: {
-      id: getRandomPositiveInteger(1, 1000),
-      avatar: `img/avatar-${getRandomPositiveInteger(1, 6)}.svg`,
-      message: getRandomArrayElement(MESSAGES),
-      name: getRandomArrayElement(NAMES),
-    }
+    comments: Array.from( { length: getRandomPositiveInteger(0, 10) }, createRandomComments),
   };
 }
 
-// eslint-disable-next-line no-unused-vars
+function createRandomComments() {
+  // Генерирует массив рандомной длины с комментариями
+  return {
+    id: getRandomPositiveInteger(1, 1000),
+    avatar: `img/avatar-${getRandomPositiveInteger(1, 6)}.svg`,
+    message: getRandomArrayElement(MESSAGES),
+    name: getRandomArrayElement(NAMES)
+  };
+}
+
 const similarDescription = (count) => Array.from( { length: count }, createPhotoDescription);
+
 
 export {similarDescription};
