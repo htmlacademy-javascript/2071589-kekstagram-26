@@ -35,7 +35,7 @@ const renderBigPictures = ({url, likes, description}) => {
   document.body.classList.add('modal-open');
   const bigPicture = document.querySelector('.big-picture');
   const socialCommentsElem = bigPicture.querySelector('.social__comments');
-  //console.log(picture.url);
+
   bigPicture.querySelector('.big-picture__img img').src = url;
   const comments = socialComments();
   socialCommentsElem.appendChild(comments);
