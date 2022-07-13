@@ -32,18 +32,18 @@ const MESSAGES = [
 
 
 function createPhotoDescription() {
-  // Генерирует дату для фоток юзеров
+  // Сгенерировать дату для фоток юзеров
   return {
     id: getRandomPositiveInteger(1, 25),
     url: `photos/${getRandomPositiveInteger(1, 25)}.jpg`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomPositiveInteger(15, 200),
-    comments: Array.from( { length: getRandomPositiveInteger(0, 10) }, createRandomComments),
+    comments: Array.from( { length: getRandomPositiveInteger(5, 10) }, createRandomComments),
   };
 }
 
 function createRandomComments() {
-  // Генерирует массив рандомной длины с комментариями
+  // Сгенерировать массив рандомной длины с комментариями
   return {
     id: getRandomPositiveInteger(1, 1000),
     avatar: `img/avatar-${getRandomPositiveInteger(1, 6)}.svg`,
